@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\s27773\\RiderProjects\\PrzykladowyKolos\\HospitalAPI\\HospitalAPI.csproj": {}
+    "/Users/oskalbarczyk/RiderProjects/APBD-example-test/HospitalAPI/HospitalAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\s27773\\RiderProjects\\PrzykladowyKolos\\HospitalAPI\\HospitalAPI.csproj": {
+    "/Users/oskalbarczyk/RiderProjects/APBD-example-test/HospitalAPI/HospitalAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\s27773\\RiderProjects\\PrzykladowyKolos\\HospitalAPI\\HospitalAPI.csproj",
+        "projectUniqueName": "/Users/oskalbarczyk/RiderProjects/APBD-example-test/HospitalAPI/HospitalAPI.csproj",
         "projectName": "HospitalAPI",
-        "projectPath": "C:\\Users\\s27773\\RiderProjects\\PrzykladowyKolos\\HospitalAPI\\HospitalAPI.csproj",
-        "packagesPath": "C:\\Users\\s27773\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\s27773\\RiderProjects\\PrzykladowyKolos\\HospitalAPI\\obj\\",
+        "projectPath": "/Users/oskalbarczyk/RiderProjects/APBD-example-test/HospitalAPI/HospitalAPI.csproj",
+        "packagesPath": "/Users/oskalbarczyk/.nuget/packages/",
+        "outputPath": "/Users/oskalbarczyk/RiderProjects/APBD-example-test/HospitalAPI/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\s27773\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/oskalbarczyk/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -77,7 +75,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

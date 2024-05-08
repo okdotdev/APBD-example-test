@@ -1,6 +1,6 @@
 ﻿namespace HospitalAPI.Models.DTO;
 
-public class ReturnedPrescription
+public class PrescriptionDTO
 {
     public int IdPrescription { get; set; }
     public DateTime Date { get; set; }

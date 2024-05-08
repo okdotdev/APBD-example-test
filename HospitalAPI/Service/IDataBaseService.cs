@@ -1,8 +1,10 @@
-﻿using HospitalAPI.Models.DTO;
+﻿using HospitalAPI.Models;
+using HospitalAPI.Models.DTO;
 
 namespace HospitalAPI.Service;
 
 public interface IDataBaseService
 {
-    IEnumerable<ReturnedPrescription>GetPrescriptionsData(string doctorLastName = "empty");
+    IEnumerable<PrescriptionDTO>GetPrescriptionsData(string doctorLastName = "empty");
+    Prescription AddPrescription(NewPrescriptionDTO newPrescription);
 }

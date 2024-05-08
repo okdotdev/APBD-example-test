@@ -1,16 +1,15 @@
-﻿using HospitalAPI.Models.DTO;
+﻿using HospitalAPI.Models;
+using HospitalAPI.Models.DTO;
 using HospitalAPI.Service;
 
 namespace HospitalAPI.Controllers;
 
 using Microsoft.AspNetCore.Mvc;
 
-
 [ApiController]
 [Route("/api/prescriptions")]
 public class HospitalController : Controller
 {
-
     private readonly IDataBaseService _dataBaseService;
 
     public HospitalController(IDataBaseService dataBaseService)
@@ -20,17 +19,43 @@ public class HospitalController : Controller
 
 
     [HttpGet]
-    public IActionResult GetPrescriptionsData(string doctorLastName = "empty")
+    public IActionResult GetPrescriptionsData(string? doctorLastName)
     {
-        IEnumerable<ReturnedPrescription> result = _dataBaseService.GetPrescriptionsData(doctorLastName);
+        try
+        {
+            IEnumerable<PrescriptionDTO> result = string.IsNullOrEmpty(doctorLastName)
+                ? _dataBaseService.GetPrescriptionsData()
+                : _dataBaseService.GetPrescriptionsData(doctorLastName);
 
-        return Ok(result);
+            if (!result.Any())
+            {
+                return NotFound();
+            }
+
+            return Ok(result);
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, ex.Message);
+        }
     }
 
     [HttpPost]
-    public IActionResult PostPrescription()
+    public IActionResult PostPrescription([FromBody] NewPrescriptionDTO newPrescription)
     {
-        return Ok();
-    }
+        try
+        {
+            Prescription prescription = _dataBaseService.AddPrescription(newPrescription);
 
+            return Ok(prescription);
+        }
+        catch (ArgumentException ex)
+        {
+            return BadRequest(ex.Message);
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, ex.Message);
+        }
+    }
 }
